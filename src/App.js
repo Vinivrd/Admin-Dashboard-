@@ -7,7 +7,7 @@ import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
 
 import { Ecommerce,Orders,Calendar,Employees,Stacked,Pyramid
 ,Customers,Kanban ,Area,Bar,Pie,Financial,ColorPicker,
-  ColorMapping,Editor} from './pages';
+  ColorMapping,Editor,Line} from './pages';
 
 import './App.css'
 
@@ -33,11 +33,11 @@ const App = () => {
             <div className='w-72 fixed 
             sidebar dark:bg-secondary-dark-bg
             bg-white'>
-              <SideBar/>
+              <Sidebar/>
             </div>
             ) : (
             <div className='w-0 dark:bg-secondary-dark-bg'>
-              <SideBar/>
+              <Sidebar/>
             </div>
           )}
           <div className={
@@ -54,13 +54,13 @@ const App = () => {
           <div>
             <Routes>
               {/* Dashboard */}
-              <Route path='/' element = {<ECommerce/> }/>
-              <Route path='/ecomerce' element = {<ECommerce/> }/>
+              <Route path='/' element = {<Ecommerce/> }/>
+              <Route path='/ecomerce' element = {<Ecommerce/> }/>
 
               {/* Pages */}
               <Route path='/orders' element = {<Orders/> }/>
               <Route path='/employees' element = {<Employees/> }/>
-              <Route path='/customores' element = {<Customores/> }/>
+              <Route path='/customores' element = {<Customers/> }/>
 
               {/* Apps*/}
               <Route path='/kanban' element = {<Kanban/> }/>
@@ -74,7 +74,7 @@ const App = () => {
               <Route path='/bar' element = {<Bar/> }/>
               <Route path='/pie' element = {<Pie/> }/>
               <Route path='/financial' element = {<Financial/> }/>
-              <Route path='/color-maping' element = {<ColorMaping/> }/>
+              <Route path='/color-maping' element = {<ColorMapping/> }/>
               <Route path='/pyramid' element = {<Pyramid/> }/>
               <Route path='/stacked' element = {<Stacked/> }/>
             </Routes>
