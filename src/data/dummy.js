@@ -3192,7 +3192,6 @@ export const stackedCustomSeries = [
     name: 'Expense',
     type: 'StackingColumn',
     background: 'red',
-
   },
 
 ];
