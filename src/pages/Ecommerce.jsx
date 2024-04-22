@@ -10,6 +10,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/product9.jpg';
 
 const Ecommerce = () => {
+  const {currentColor} = useStateContext();
   return (
     <div className='mt-24'>
 
@@ -27,7 +28,7 @@ const Ecommerce = () => {
             <div className='mt-6'>
               <Button
                 color = "white"
-                bgColor = "blue"
+                bgColor = {currentColor}
                 text = "Dowload"
                 borderRadius = "10px"
                 size="md"
@@ -108,18 +109,18 @@ const Ecommerce = () => {
                  
                   <div className="mt-5"> 
                      <SparkLine
-                        currentColor="blue"
+                        currentColor={currentColor}
                         id="line-sparkLine"
                         ype="Line"
                         height="80px" 
                         width="250px"
                         data={SparklineAreaData} 
-                        color="blue"/>
+                        color={currentColor}/>
                   </div>
                   <div className='mt-10'>
                     <Button
                       color="white"
-                      bgColor= "blue"
+                      bgColor= {currentColor}
                       text = "Dowload Report"
                       borderRadius= "10px"
                       />
